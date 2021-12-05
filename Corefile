@@ -13,7 +13,7 @@ deepmirror.com {
 }
 
 example.org:53 {
-    file /etc/coredns/db.example.org
+    file /etc/coredns/db.example.org/file
     errors
     log
 }
