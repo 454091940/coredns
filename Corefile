@@ -12,7 +12,8 @@ example.org:53 {
 
 .:53 {
     root /etc/coredns
-    git github.com:454091940/coredns {
+    git {
+        repo        github.com:454091940/coredns
         branch      main
         interval    60
     }
