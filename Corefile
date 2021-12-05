@@ -1,4 +1,4 @@
-deepmirror.com {
+deepmirror.com:53 {
     file /etc/coredns/deepmirror.com/file
     errors
     log
