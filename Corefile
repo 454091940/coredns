@@ -1,6 +1,6 @@
 . {
     root /etc/coredns
-    git github.com/454091940/coredns {
+    git github.com:454091940/coredns {
         branch      main
         interval    60
     }
