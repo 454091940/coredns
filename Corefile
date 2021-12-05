@@ -2,6 +2,7 @@ deepmirror.com:53 {
     file /etc/coredns/deepmirror.com/file
     errors
     log
+    cache 120
 }
 
 example.org:53 {
