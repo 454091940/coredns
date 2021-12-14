@@ -18,8 +18,8 @@ example.org:53 {
         reload 60s
     }
 
-    reload 60s
-    cache 60s
+    reload 6s
+    cache 6s
     errors
     log
 }
