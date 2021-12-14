@@ -11,7 +11,7 @@ auto deepmirror.com:53 {
 
 auto example.org:53 {
     file /data/coredns/example.org/file {
-        reload 60S
+        reload 60s
     }
 
     reload 60s
