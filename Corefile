@@ -9,7 +9,7 @@ auto deepmirror.com:53 {
     log
 }
 
-auto example.org:53 {
+example.org:53 {
     file /data/coredns/example.org/file {
         reload 60s
     }
