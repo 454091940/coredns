@@ -8,5 +8,5 @@ $ORIGIN deepmirror.com.
 				)
 
 
-www     IN A     192.168.70.108
+www     IN A     192.168.70.101
 node102 IN A     192.168.70.102
