@@ -1,10 +1,14 @@
-auto deepmirror.com:53 {
-    file /data/coredns/deepmirror.com/file {
-         reload 60s
-    }
+gz01.isilon.deepmirror.com:53 {
+    errors
+    forward . 172.21.2.201
+}
 
-    reload 60s
-    cache 60s
+deepmirror.com:53 {
+    auto {
+        directory /data/coredns/deepmirror.com
+        reload 6s
+    }
+    cache 5s
     errors
     log
 }
@@ -30,6 +34,12 @@ example.org:53 {
     hosts /data/coredns/hostsfile {
         fallthrough
     }
+
+    #health :8081 {
+    #    lameduck 5s
+    #}
+    #ready 0.0.0.0:8082
+    prometheus 0.0.0.0:9153
 
     forward . 8.8.8.8:53
     reload 6s
