@@ -1,5 +1,5 @@
 deepmirror.com:53 {
-    file ./data/deepmirror.com/file
+    file /data/coredns/deepmirror.com/file
     reload 1m
     cache 120
     errors
@@ -7,7 +7,7 @@ deepmirror.com:53 {
 }
 
 example.org:53 {
-    file ./data/example.org/file
+    file /data/coredns/example.org/file
     reload 1m
     cache 120
     errors
@@ -15,13 +15,13 @@ example.org:53 {
 }
 
 .:53 {
-    root ./data
+    root /data/coredns
     git {
         repo        github.com:454091940/coredns
         branch      main
         interval    60
     }
-    hosts ./data/hostsfile {
+    hosts /data/coredns/hostsfile {
         fallthrough
     }
     forward . 8.8.8.8:53
