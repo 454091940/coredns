@@ -8,6 +8,8 @@ deepmirror.com:53 {
         directory /data/coredns/deepmirror.com
         reload 6s
     }
+
+    reload 6s
     cache 5s
     errors
     log
