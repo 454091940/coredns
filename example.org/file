@@ -7,5 +7,5 @@ $ORIGIN example.org.
 				3600       ; minimum (1 hour)
 				)
 
-www     IN A     127.0.0.1
+www     IN A     127.0.0.2
         IN AAAA  ::1
