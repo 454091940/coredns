@@ -1,16 +1,20 @@
 auto deepmirror.com:53 {
     file /data/coredns/deepmirror.com/file {
-         reload 6s
+         reload 60s
     }
 
-    reload 6s
+    reload 60s
+    cache 60s
     errors
     log
 }
 
-example.org:53 {
-    file /data/coredns/example.org/file
-    reload 6s
+auto example.org:53 {
+    file /data/coredns/example.org/file {
+        reload 60S
+    }
+
+    reload 60s
     cache 60s
     errors
     log
@@ -26,6 +30,7 @@ example.org:53 {
     hosts /data/coredns/hostsfile {
         fallthrough
     }
+
     forward . 8.8.8.8:53
     reload 6s
     cache 60s
