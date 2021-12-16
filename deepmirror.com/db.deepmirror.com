@@ -10,3 +10,4 @@ $ORIGIN deepmirror.com.
 
 www     IN A     192.168.70.105
 node102 IN A     192.168.70.102
+node103 IN A     192.168.70.103
