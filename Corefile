@@ -24,7 +24,6 @@ example.org:53 {
 .:53 {
     auto deepmirror.com {
         directory /data/coredns/deepmirror.com db\.(.*) {1}
-        reload 6s
     }
     root /data/coredns
     git {
