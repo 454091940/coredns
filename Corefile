@@ -2,6 +2,11 @@ gz01.isilon.deepmirror.com:53 {
     forward . 172.21.2.201
 }
 
+auto deepmirror.com {
+    directory /data/coredns/deepmirror.com
+    reload 6s
+}
+
 example.org:53 {
     file /data/coredns/example.org/file {
         reload 60s
@@ -12,11 +17,6 @@ example.org:53 {
 }
 
 .:53 {
-    auto deepmirror.com {
-        directory /data/coredns/deepmirror.com
-        reload 6s
-    }
-
     root /data/coredns
     git {
         repo        github.com:454091940/coredns
