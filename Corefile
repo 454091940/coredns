@@ -16,10 +16,10 @@ example.org:53 {
 deepmirror.com:53 {
     auto {
         directory /data/coredns/deepmirror.com db\.(.*) {1}
+        reload 6s
     }
 
     debug
-    reload 6s
     log
 }
 
@@ -28,11 +28,11 @@ deepmirror.com:53 {
     #     directory /data/coredns/deepmirror.com db\.(.*) {1}
     # }
     root /data/coredns
-    git {
-        repo        github.com:454091940/coredns
-        branch      main
-        interval    60
-    }
+    #git {
+    #    repo        github.com:454091940/coredns
+    #    branch      main
+    #    interval    60
+    #}
     hosts /data/coredns/hostsfile {
         fallthrough
     }
