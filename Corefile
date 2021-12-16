@@ -13,18 +13,20 @@ example.org:53 {
     log
 }
 
-#auto deepmirror.com:53 {
-#    directory /data/coredns/deepmirror.com db\.(.*) {1}
-#
-#    debug
-#    reload 6s
-#    log
-#}
-
-.:53 {
-    auto deepmirror.com {
+deepmirror.com:53 {
+    auto {
         directory /data/coredns/deepmirror.com db\.(.*) {1}
     }
+
+    debug
+    reload 6s
+    log
+}
+
+.:53 {
+    # auto deepmirror.com {
+    #     directory /data/coredns/deepmirror.com db\.(.*) {1}
+    # }
     root /data/coredns
     git {
         repo        github.com:454091940/coredns
