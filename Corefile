@@ -43,6 +43,5 @@ example.org:53 {
 
     debug
     forward . 8.8.8.8:53
-    reload 6s
     log
 }
