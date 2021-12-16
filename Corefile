@@ -1,5 +1,6 @@
 gz01.isilon.deepmirror.com:53 {
     forward . 172.21.2.201
+    debug
 }
 
 example.org:53 {
@@ -7,6 +8,7 @@ example.org:53 {
         reload 60s
     }
 
+    debug
     reload 6s
     log
 }
@@ -32,6 +34,7 @@ example.org:53 {
     #ready 0.0.0.0:8082
     prometheus 0.0.0.0:9153
 
+    debug
     forward . 8.8.8.8:53
     reload 6s
     log
