@@ -13,10 +13,8 @@ example.org:53 {
     log
 }
 
-deepmirror.com:53 {
-    file /data/coredns/deepmirror.com/db.deepmirror.com {
-        reload 60s
-    }
+auto deepmirror.com:53 {
+    directory /data/coredns/deepmirror.com db\.(.*) {1}
 
     debug
     reload 6s
