@@ -1,5 +1,4 @@
 gz01.isilon.deepmirror.com:53 {
-    errors
     forward . 172.21.2.201
 }
 
@@ -9,8 +8,6 @@ example.org:53 {
     }
 
     reload 6s
-    cache 6s
-    errors
     log
 }
 
@@ -39,6 +36,5 @@ example.org:53 {
     forward . 8.8.8.8:53
     reload 6s
     cache 60s
-    errors
     log
 }
