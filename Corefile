@@ -1,5 +1,7 @@
 .:53 {
-    gz01.isilon.deepmirror.com { forward . 172.21.2.201 }
+    gz01.isilon.deepmirror.com {
+        forward . 172.21.2.201
+    }
 
     example.org {
         file /data/coredns/example.org/file {
