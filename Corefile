@@ -1,49 +1,38 @@
-gz01.isilon.deepmirror.com:53 {
-    forward . 172.21.2.201
-    debug
-}
-
-example.org:53 {
-    file /data/coredns/example.org/file {
-        reload 60s
-    }
-
-    debug
-    reload 6s
-    log
-}
-
-deepmirror.com:53 {
-    auto {
-        directory /data/coredns/deepmirror.com db\.(.*) {1}
-        reload 6s
-    }
-
-    debug
-    log
-}
-
 .:53 {
-    # auto deepmirror.com {
-    #     directory /data/coredns/deepmirror.com db\.(.*) {1}
-    # }
-    root /data/coredns
-    #git {
-    #    repo        github.com:454091940/coredns
-    #    branch      main
-    #    interval    60
-    #}
+    gz01.isilon.deepmirror.com { forward . 172.21.2.201 }
+
+    example.org {
+        file /data/coredns/example.org/file {
+            reload 60s
+        }
+    }
+
+    auto deepmirror.com {
+        directory /data/coredns/deepmirror.com db\.(.*) {1}
+    }
+
     hosts /data/coredns/hostsfile {
         fallthrough
     }
 
-    #health :8081 {
+    root /data/coredns
+    git {
+        repo        github.com:454091940/coredns
+        branch      main
+        interval    60
+    }
+
+    #health 0.0.0.0:8081 {
     #    lameduck 5s
     #}
+
     #ready 0.0.0.0:8082
+
     prometheus 0.0.0.0:9153
 
-    debug
+    whoami
+    errors
+    reload 10s
     forward . 8.8.8.8:53
     log
 }
