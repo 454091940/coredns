@@ -1,5 +1,5 @@
 $ORIGIN deepmirror.com.
-@	3600 IN	SOA sns.dns.icann.org. noc.dns.icann.org. (
+@	3601 IN	SOA sns.dns.icann.org. noc.dns.icann.org. (
 				2017042745 ; serial
 				7200       ; refresh (2 hours)
 				3600       ; retry (1 hour)
